@@ -13,34 +13,16 @@ use App\Notifications\ImageRated;
 
 class ImageController extends Controller
 {
-    /**
-     * Image repository.
-     *
-     * @var \App\Repositories\ImageRepository
-     */
+
     protected $imageRepository;
 
-    /**
-     * Album repository.
-     *
-     * @var \App\Repositories\ImageRepository
-     */
+
     protected $albumRepository;
 
-    /**
-     * Category repository.
-     *
-     * @var \App\Repositories\CategoryRepository
-     */
+
     protected $categoryRepository;
 
-    /**
-     * Create a new ImageController instance.
-     *
-     * @param  \App\Repositories\ImageRepository $imageRepository
-     * @param  \App\Repositories\AlbumRepository $albumRepository
-     * @param  \App\Repositories\CategoryRepository $categoryRepository
-     */
+
     public function __construct(
         ImageRepository $imageRepository,
         AlbumRepository $albumRepository,
@@ -51,13 +33,7 @@ class ImageController extends Controller
         $this->categoryRepository = $categoryRepository;
     }
 
-    /**
-     * Display a listing of albums for image
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
+
     public function albums(Request $request,  Image $image)
     {
         $this->authorize ('manage', $image);
@@ -67,17 +43,11 @@ class ImageController extends Controller
         return view ('images.albums', compact('albums', 'image'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
+
     public function albumsUpdate(Request $request, Image $image)
     {
         $this->authorize ('manage', $image);
-        
+
         $image->albums()->sync($request->albums);
 
         $path = pathinfo (parse_url(url()->previous())['path']);
@@ -94,13 +64,7 @@ class ImageController extends Controller
         return response ()->json();
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param  \App\Models\Image  $image
-     * @return \App\models\Image
-     */
+
     public function descriptionUpdate(Request $request, Image $image)
     {
         $this->authorize ('manage', $image);
@@ -115,13 +79,7 @@ class ImageController extends Controller
         return $image;
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param  \App\Models\Image  $image
-     * @return \Illuminate\Http\Response
-     */
+
     public function adultUpdate(Request $request, Image $image)
     {
         $this->authorize ('manage', $image);
@@ -132,22 +90,13 @@ class ImageController extends Controller
         return response ()->json();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view ('images.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $request->validate ([
@@ -161,12 +110,7 @@ class ImageController extends Controller
         return back ()->with ('ok', __ ("L'image a bien été enregistrée"));
     }
 
-    /**
-     * Display a listing of the images for the specified category.
-     *
-     * @param  string $slug
-     * @return \Illuminate\Http\Response
-     */
+
     public function category($slug)
     {
         $category = $this->categoryRepository->getBySlug ($slug);
@@ -175,12 +119,7 @@ class ImageController extends Controller
         return view ('home', compact ('category', 'images'));
     }
 
-    /**
-     * Display a listing of the images for the specified album.
-     *
-     * @param  string $slug
-     * @return \Illuminate\Http\Response
-     */
+
     public function album($slug)
     {
         $album = $this->albumRepository->getBySlug ($slug);
@@ -189,12 +128,7 @@ class ImageController extends Controller
         return view ('home', compact ('album', 'images'));
     }
 
-    /**
-     * Display a listing of the images for the specified user.
-     *
-     * @param  \App\Models\User $user
-     * @return \Illuminate\Http\Response
-     */
+
     public function user(User $user)
     {
         $images = $this->imageRepository->getImagesForUser ($user->id);
@@ -202,12 +136,7 @@ class ImageController extends Controller
         return view ('home', compact ('user', 'images'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Image $image
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Image $image)
     {
         $this->authorize ('manage', $image);
@@ -217,13 +146,7 @@ class ImageController extends Controller
         return back ();
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Image
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Image $image)
     {
         $this->authorize('manage', $image);
@@ -234,14 +157,7 @@ class ImageController extends Controller
         return back()->with('updated', __('La catégorie a bien été changée !'));
     }
 
-    /**
-     * Rate the image.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \App\Repositories\NotificationRepository $notificationRepository
-     * @param  \App\Models\Image
-     * @return array
-     */
+
     public function rate(Request $request, NotificationRepository $notificationRepository, Image $image)
     {
         // Get authenticated user
@@ -269,13 +185,7 @@ class ImageController extends Controller
         ];
     }
 
-    /**
-     * Update the clicks.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Image
-     * @return array
-     */
+  
     public function click(Request $request, Image $image)
     {
         if ($request->session()->has('images') && in_array ($image->id, session ('images'))) {

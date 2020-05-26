@@ -8,11 +8,7 @@ use App\Repositories\ { CategoryRepository, AlbumRepository };
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+
     public function boot()
     {
         Blade::if ('admin', function () {
@@ -43,11 +39,7 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
+  
     public function register()
     {
         //

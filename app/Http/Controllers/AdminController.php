@@ -10,18 +10,10 @@ use Illuminate\Contracts\Foundation\Application;
 
 class AdminController extends Controller
 {
-    /**
-     * Image repository.
-     *
-     * @var \App\Repositories\ImageRepository
-     */
+
     protected $repository;
 
-    /**
-     * Create a new AdminController instance.
-     *
-     * @param  \App\Repositories\ImageRepository $repository
-     */
+
     public function __construct(ImageRepository $repository)
     {
         $this->repository = $repository;
@@ -29,11 +21,7 @@ class AdminController extends Controller
         $this->middleware('ajax')->only('destroy');
     }
 
-    /**
-     * Display a listing of the orphans.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function orphans()
     {
         $orphans = $this->repository->getOrphans ();
@@ -42,11 +30,7 @@ class AdminController extends Controller
         return view ('maintenance.orphans', compact ('orphans'));
     }
 
-    /**
-     * Remove orphans from storage.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy()
     {
         $this->repository->destroyOrphans ();
@@ -54,13 +38,7 @@ class AdminController extends Controller
         return response ()->json ();
     }
 
-    /**
-     * Maintenance mode.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Request $request, Application $app)
     {
         $maintenance = $app->isDownForMaintenance();
@@ -75,12 +53,7 @@ class AdminController extends Controller
         return view ('maintenance.maintenance', compact ('maintenance', 'ip', 'ipChecked'));
     }
 
-    /**
-     * Update maintenance mode.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request)
     {
         if($request->maintenance) {

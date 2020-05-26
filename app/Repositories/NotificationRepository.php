@@ -6,13 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class NotificationRepository
 {
-    /**
-     * Store image.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Image $image
-     * @return void
-     */
+    
     public function deleteDuplicate($user, $image)
     {
         DB::table('notifications')
