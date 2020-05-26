@@ -5,19 +5,15 @@ use Illuminate\Database\Seeder;
 class AlbumsTableSeeder extends Seeder
 {
 
-    /**
-     * Auto generated seed file
-     *
-     * @return void
-     */
+
     public function run()
     {
-        
+
 
         \DB::table('albums')->delete();
-        
+
         \DB::table('albums')->insert(array (
-            0 => 
+            0 =>
             array (
                 'name' => 'Album 1',
                 'slug' => 'album-1',
@@ -25,7 +21,7 @@ class AlbumsTableSeeder extends Seeder
                 'created_at' => '2018-02-25 12:07:18',
                 'updated_at' => '2018-02-25 12:07:18',
             ),
-            1 => 
+            1 =>
             array (
                 'name' => 'Album 2',
                 'slug' => 'album-2',
@@ -33,7 +29,7 @@ class AlbumsTableSeeder extends Seeder
                 'created_at' => '2018-02-25 12:07:24',
                 'updated_at' => '2018-02-25 12:07:24',
             ),
-            2 => 
+            2 =>
             array (
                 'name' => 'Album 3',
                 'slug' => 'album-3',
@@ -42,7 +38,7 @@ class AlbumsTableSeeder extends Seeder
                 'updated_at' => '2018-02-25 12:07:28',
             ),
         ));
-        
-        
+
+
     }
 }

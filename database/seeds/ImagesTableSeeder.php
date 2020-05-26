@@ -5,19 +5,15 @@ use Illuminate\Database\Seeder;
 class ImagesTableSeeder extends Seeder
 {
 
-    /**
-     * Auto generated seed file
-     *
-     * @return void
-     */
+
     public function run()
     {
-        
+
 
         \DB::table('images')->delete();
-        
+
         \DB::table('images')->insert(array (
-            0 => 
+            0 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -26,7 +22,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:23:59',
                 'updated_at' => '2017-11-02 17:23:59',
             ),
-            1 => 
+            1 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -35,7 +31,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:06',
                 'updated_at' => '2017-11-02 17:24:06',
             ),
-            2 => 
+            2 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -44,7 +40,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:13',
                 'updated_at' => '2017-11-02 17:24:13',
             ),
-            3 => 
+            3 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -53,7 +49,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:22',
                 'updated_at' => '2017-11-02 17:24:22',
             ),
-            4 => 
+            4 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -62,7 +58,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:33',
                 'updated_at' => '2017-11-02 17:24:33',
             ),
-            5 => 
+            5 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -71,7 +67,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:44',
                 'updated_at' => '2017-11-02 17:24:44',
             ),
-            6 => 
+            6 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -80,7 +76,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:24:54',
                 'updated_at' => '2017-11-02 17:24:54',
             ),
-            7 => 
+            7 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -89,7 +85,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:25:03',
                 'updated_at' => '2017-11-02 17:25:03',
             ),
-            8 => 
+            8 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -98,7 +94,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:25:08',
                 'updated_at' => '2017-11-02 17:25:08',
             ),
-            9 => 
+            9 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -107,7 +103,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:26:12',
                 'updated_at' => '2017-11-02 17:26:12',
             ),
-            10 => 
+            10 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -116,7 +112,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:26:30',
                 'updated_at' => '2017-11-02 17:26:30',
             ),
-            11 => 
+            11 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -125,7 +121,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:26:42',
                 'updated_at' => '2017-11-02 17:26:42',
             ),
-            12 => 
+            12 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -134,7 +130,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:26:48',
                 'updated_at' => '2017-11-02 17:26:48',
             ),
-            13 => 
+            13 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -143,7 +139,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:26:55',
                 'updated_at' => '2017-11-02 17:26:55',
             ),
-            14 => 
+            14 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -152,7 +148,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:27:03',
                 'updated_at' => '2017-11-02 17:27:03',
             ),
-            15 => 
+            15 =>
             array (
                 'category_id' => 2,
                 'user_id' => 2,
@@ -161,7 +157,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:27:10',
                 'updated_at' => '2018-02-22 16:31:47',
             ),
-            16 => 
+            16 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -170,7 +166,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:27:17',
                 'updated_at' => '2018-02-24 21:03:48',
             ),
-            17 => 
+            17 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -179,7 +175,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:00',
                 'updated_at' => '2017-11-02 17:28:00',
             ),
-            18 => 
+            18 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -188,7 +184,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:12',
                 'updated_at' => '2017-11-02 17:28:12',
             ),
-            19 => 
+            19 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -197,7 +193,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:23',
                 'updated_at' => '2017-11-02 17:28:23',
             ),
-            20 => 
+            20 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -206,7 +202,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:30',
                 'updated_at' => '2017-11-02 17:28:30',
             ),
-            21 => 
+            21 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -215,7 +211,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:37',
                 'updated_at' => '2017-11-02 17:28:37',
             ),
-            22 => 
+            22 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -224,7 +220,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:45',
                 'updated_at' => '2017-11-02 17:28:45',
             ),
-            23 => 
+            23 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -233,7 +229,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:28:57',
                 'updated_at' => '2017-11-02 17:28:57',
             ),
-            24 => 
+            24 =>
             array (
                 'category_id' => 3,
                 'user_id' => 2,
@@ -242,7 +238,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:29:02',
                 'updated_at' => '2017-11-02 17:29:02',
             ),
-            25 => 
+            25 =>
             array (
                 'category_id' => 4,
                 'user_id' => 1,
@@ -251,7 +247,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:30:59',
                 'updated_at' => '2017-11-02 17:30:59',
             ),
-            26 => 
+            26 =>
             array (
                 'category_id' => 4,
                 'user_id' => 1,
@@ -260,7 +256,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:10',
                 'updated_at' => '2017-11-02 17:31:10',
             ),
-            27 => 
+            27 =>
             array (
                 'category_id' => 4,
                 'user_id' => 1,
@@ -269,7 +265,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:16',
                 'updated_at' => '2017-11-02 17:31:16',
             ),
-            28 => 
+            28 =>
             array (
                 'category_id' => 4,
                 'user_id' => 1,
@@ -278,7 +274,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:31',
                 'updated_at' => '2017-11-02 17:31:31',
             ),
-            29 => 
+            29 =>
             array (
                 'category_id' => 4,
                 'user_id' => 1,
@@ -287,7 +283,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:37',
                 'updated_at' => '2017-11-02 17:31:37',
             ),
-            30 => 
+            30 =>
             array (
                 'category_id' => 4,
                 'user_id' => 2,
@@ -296,7 +292,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:52',
                 'updated_at' => '2017-11-02 17:31:52',
             ),
-            31 => 
+            31 =>
             array (
                 'category_id' => 4,
                 'user_id' => 2,
@@ -305,7 +301,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:31:58',
                 'updated_at' => '2017-11-02 17:31:58',
             ),
-            32 => 
+            32 =>
             array (
                 'category_id' => 4,
                 'user_id' => 2,
@@ -314,7 +310,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:32:13',
                 'updated_at' => '2017-11-02 17:32:13',
             ),
-            33 => 
+            33 =>
             array (
                 'category_id' => 5,
                 'user_id' => 2,
@@ -323,7 +319,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:32:38',
                 'updated_at' => '2017-11-02 17:32:38',
             ),
-            34 => 
+            34 =>
             array (
                 'category_id' => 5,
                 'user_id' => 2,
@@ -332,7 +328,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:32:46',
                 'updated_at' => '2017-11-02 17:32:46',
             ),
-            35 => 
+            35 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -341,7 +337,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:33:22',
                 'updated_at' => '2017-11-02 17:33:22',
             ),
-            36 => 
+            36 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -350,7 +346,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:33:33',
                 'updated_at' => '2017-11-02 17:33:33',
             ),
-            37 => 
+            37 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -359,7 +355,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:33:40',
                 'updated_at' => '2017-11-02 17:33:40',
             ),
-            38 => 
+            38 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -368,7 +364,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:33:46',
                 'updated_at' => '2017-11-02 17:33:46',
             ),
-            39 => 
+            39 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -377,7 +373,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:33:58',
                 'updated_at' => '2017-11-02 17:33:58',
             ),
-            40 => 
+            40 =>
             array (
                 'category_id' => 5,
                 'user_id' => 1,
@@ -386,7 +382,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-02 17:34:04',
                 'updated_at' => '2017-11-02 17:34:04',
             ),
-            41 => 
+            41 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -395,7 +391,7 @@ class ImagesTableSeeder extends Seeder
                 'created_at' => '2017-11-03 14:55:46',
                 'updated_at' => '2017-11-03 14:55:46',
             ),
-            42 => 
+            42 =>
             array (
                 'category_id' => 1,
                 'user_id' => 1,
@@ -405,7 +401,7 @@ class ImagesTableSeeder extends Seeder
                 'updated_at' => '2018-02-24 21:07:31',
             ),
         ));
-        
-        
+
+
     }
 }

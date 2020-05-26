@@ -5,9 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateImageUserTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+    
     public function up()
     {
         Schema::create('image_user', function (Blueprint $table) {
@@ -21,9 +19,7 @@ class CreateImageUserTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down()
     {
         Schema::drop('image_user');
