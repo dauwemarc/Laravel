@@ -2,11 +2,7 @@
 
 return [
 
-    /*
-     * Available languages
-     *
-     * @var array
-     */
+
     'languages' => [
         /*
          * Key is the Laravel locale code
